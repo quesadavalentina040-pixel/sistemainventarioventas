@@ -15,11 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Crear los roles predeterminados si no existen
+        \App\Models\Role::firstOrCreate(['nombre' => 'Admin'], ['descripcion' => 'Administrador del sistema']);
+        \App\Models\Role::firstOrCreate(['nombre' => 'Vendedor'], ['descripcion' => 'Vendedor de insumos']);
+        \App\Models\Role::firstOrCreate(['nombre' => 'Cliente'], ['descripcion' => 'Cliente / Productor']);
 
+        // Crear usuario de prueba
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'role_id' => 1,
         ]);
     }
 }
