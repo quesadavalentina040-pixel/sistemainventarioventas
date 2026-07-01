@@ -60,7 +60,7 @@
 
                     <!-- Unidades Productivas -->
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link text-success">
+                           <a href="#"  class="nav-link text-dark">
                              <i class="fas fa-user"></i>&nbsp;
                             <p>
                                 Gestion Usuarios
@@ -69,13 +69,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                           <a href=""  class="nav-link text-dark">
+                           <a href="{{ route('usuarios.create') }}"  class="nav-link text-dark">
                                     <i class="nav-icon fas fa-edit"></i>
                                     <p>Ingreso</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href=""  class="nav-link text-dark">
+                                <a href="{{ route('usuarios.store') }}"  class="nav-link text-dark">
                                     <i class="nav-icon fas fa-clipboard-list"></i>
                                     <p>Listas</p>
                                 </a>
@@ -83,19 +83,24 @@
                         </ul>
                     </li>
 
-                    <!-- Bodega Finca -->
+                                        <!-- Bodega Finca / Proveedores -->
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link text-success">
-                            <i class="fas fa-warehouse"></i>&nbsp;
+                             <i class="fas fa-truck"></i>&nbsp;
                             <p>
-                                Bodega Finca
+                               Proveedores
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href= ""
-                                    class="nav-link text-dark">
+                                <a href="{{ route('proveedores.create') }}" class="nav-link text-dark">
+                                    <i class="nav-icon fas fa-edit"></i>
+                                    <p>Ingreso</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">
                                     <i class="nav-icon fas fa-box"></i>
                                     <p>Insumos</p>
                                 </a>
@@ -108,6 +113,7 @@
                             </li>
                         </ul>
                     </li>
+
 
                     <!-- Roles Mayordomo -->
                     <li class="nav-item">
